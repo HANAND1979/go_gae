@@ -1,0 +1,23 @@
+application: myapp
+# No version required; this does routing independent of version.
+
+dispatch:
+  # Default module serves the typical web resources and all static resources.
+  - url: "*/favicon.ico"
+    module: default
+
+  # Default module serves simple hostname request.
+  - url: "banded-setting-124116.appspot.com/"
+    module: default
+
+  # Send all mobile traffic to the mobile frontend.
+  - url: "*/simple_hello/*"
+    module: simple_hello
+
+  # Send all work to the one static backend.
+  - url: "*/hello_wotemplates/*"
+    module: hello_wotemplates
+	
+	# Send all work to the one static backend.
+  - url: "*/hello_wtemplates/*"
+    module: hello_withtemplates
