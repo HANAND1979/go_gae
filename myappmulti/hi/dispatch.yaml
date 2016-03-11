@@ -1,0 +1,9 @@
+application: myappmulti
+
+dispatch:
+  - url: "myappmulti.appspot.com/"
+    module: default
+   
+  - url: "*/hello/*"
+    module: hello
+  
