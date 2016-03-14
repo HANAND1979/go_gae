@@ -1,12 +1,12 @@
 application: myappmulti
-module: default
+module: default #this tells GAE that this is the default module. 
 version: alpha
 runtime: go
 api_version: go1
 
 handlers:
 - url: /.*
-  script: _go_app
+  script: _go_app #This is the only parameter passed on for the script handler in Go 
 
 instance_class: B1
 basic_scaling:
